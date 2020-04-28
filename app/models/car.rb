@@ -1,5 +1,5 @@
 class Car
-  attr_accessor :passenger_count #:current_movie_screen,
+  attr_accessor :passenger_count #:current_movie_screen
 
   @@all =[]
 
@@ -19,7 +19,7 @@ class Car
     end
   end
 
-  # def current_movie_screen
+  # def current_movie_screen #reader method
   #   binding.pry
   #   current_movie = MovieScreen.all_screens do |cars|
   #     binding.pry
@@ -28,7 +28,7 @@ class Car
   #   current_movie
   # end
 
-  # def current_movie_screen=(current_movie_screen)
+  # def current_movie_screen=(current_movie_screen) #writer method
   #   self.movie_screen = current_movie_screen
   # end
 

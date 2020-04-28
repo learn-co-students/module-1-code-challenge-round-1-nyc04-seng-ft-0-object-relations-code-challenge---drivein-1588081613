@@ -1,5 +1,5 @@
 class DriveIn
-    attr_reader :name
+    attr_reader :name, :capacity
 
     @@all = []
 
@@ -21,6 +21,18 @@ class DriveIn
         MovieScreen.all_screens.select do |movie|
             binding.pry
             movie.drive_in == self
+        end
+    end
+
+    def whats_playing
+        MovieScreen.all_screens
+    end
+
+    def full_house?
+        if #determine the capacity of drive-in from the movie_screen method
+            return true
+        else
+            return false
         end
     end
 
