@@ -58,6 +58,9 @@ class MovieScreen
 # - `MovieScreen#available_spots`
   #   - Returns the number of spots for cars available at this movie screen. This should be the capacity minus the number of cars currently at this movie screen.
 # - `MovieScreen#add_car(car)`
+  def self.available_spots
+    self.capacity - cars.count
+  end
 #   - Takes in a `Car` instance as the argument
 #   - Depending on the available capacity of the movie screen, associates the `Car` with this movie screen.
 #     - If the movie screen is _not_ at capacity, updates the car's current movie screen and returns the string `"Enjoy!"`.

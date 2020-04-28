@@ -28,5 +28,8 @@ class DriveIn
     end
 # - `DriveIn#full_house?`
 #   - Returns true if all movie screens at _this_ drive-in are at capacity.
+    # def full_house?
+    #     MovieScreen.at_capacity?
+    # end
 
 end
