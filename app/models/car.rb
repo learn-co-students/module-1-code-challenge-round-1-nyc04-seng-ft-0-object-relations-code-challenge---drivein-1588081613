@@ -12,6 +12,14 @@ class Car
     @@all 
   end 
 
+  def current_movie_screen
+    all_screens.select |current_movie_screen|
+      current_movie_screen if car == self 
+    end 
+  end 
+
+  
+
 end
 
 # Car
@@ -22,3 +30,10 @@ end
 # Returns the number of passengers in the car.
 # Car.all
 # Returns an array of all car instances that have been created.
+
+# Car
+# Car#current_movie_screen
+# Returns the current movie screen that a particular car is associated with.
+# Car#current_movie_screen=
+# Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
+# Note: this will happen after a car has already been created.

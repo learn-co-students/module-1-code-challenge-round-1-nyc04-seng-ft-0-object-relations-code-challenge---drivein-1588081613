@@ -12,6 +12,10 @@ class MovieScreen
     @@all
   end 
 
+  def cars 
+    cars.self
+  end 
+
 end
 
 
@@ -27,3 +31,7 @@ end
 # should return the DriveIn associated with this MovieScreen
 # MovieScreen.all_screens
 # Returns an array of all movie screens that have been created.
+
+# MovieScreen
+# MovieScreen#cars
+# Returns an array of all cars currently at this movie screen.
