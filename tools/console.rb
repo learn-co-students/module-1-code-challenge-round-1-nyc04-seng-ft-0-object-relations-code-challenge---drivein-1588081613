@@ -19,7 +19,7 @@ screen2 = MovieScreen.new("Kill Bill", 5, drivein1)
 screen3 = MovieScreen.new("Taken", 5, drivein1)
 
 
-screen3 = MovieScreen.new("Kill Bill", 20, drivein2)
+screen3 = MovieScreen.new("grown Ups", 20, drivein2)
 
 
 

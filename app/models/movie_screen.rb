@@ -41,6 +41,8 @@ class MovieScreen
     end
   end
 
+  
+
   def available_spots
     @capacity - number_of_viewers
   end
@@ -51,7 +53,7 @@ class MovieScreen
       @capacity - car.passenger_count
       car.current_movie_screen = self
     else
-      puts "SOld Out!"
+      puts "Sold Out!"
     end
   end
 
