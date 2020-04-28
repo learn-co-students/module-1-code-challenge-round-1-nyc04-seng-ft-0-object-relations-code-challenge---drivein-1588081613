@@ -46,15 +46,15 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### DriveIn
 
-- `DriveIn#initialize(name)`
+<!-- - `DriveIn#initialize(name)`
   - A drive-in should be initialized with a `name` as a string.
   - The name **cannot** be changed after the drive-in is initialized.
 - `DriveIn#name`
-  - should return the name of the `DriveIn`
+  - should return the name of the `DriveIn` -->
 
 #### MovieScreen
 
-- `MovieScreen#initialize(movie_title, capacity, drive_in)`
+<!-- - `MovieScreen#initialize(movie_title, capacity, drive_in)`
   - A movie screen should be initialized with a movie title as a string, capacity (as an integer), and a `drive_in` object.
   - The movie title, capacity, and drive in **cannot** be changed after the MovieScreen is initialized.
 - `MovieScreen#movie_title`
@@ -64,17 +64,17 @@ Some of the methods listed are provided to you in the starter code. You should c
 - `MovieScreen#drive_in`
   - should return the `DriveIn` associated with this `MovieScreen`
 - `MovieScreen.all_screens`
-  - Returns an array of all movie screens that have been created.
+  - Returns an array of all movie screens that have been created. -->
 
 #### Car
 
-- `Car#initialize(passenger_count)`
+<!-- - `Car#initialize(passenger_count)`
   - A car should be initialized with a `passenger_count` (as an integer).
   - the passenger count **can** be changed after the `Car` is initialized
 - `Car#passenger_count`
   - Returns the number of passengers in the car.
 - `Car.all`
-  - Returns an array of all car instances that have been created.
+  - Returns an array of all car instances that have been created. -->
 
 ### Object Relationship Methods
 
@@ -88,8 +88,8 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### MovieScreen
 
-- `MovieScreen#cars`
-  - Returns an array of all cars currently at this movie screen.
+<!-- - `MovieScreen#cars`
+  - Returns an array of all cars currently at this movie screen. -->
 
 #### DriveIn
 

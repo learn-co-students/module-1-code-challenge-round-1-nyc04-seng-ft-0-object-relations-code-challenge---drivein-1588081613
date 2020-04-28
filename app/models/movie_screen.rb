@@ -11,6 +11,11 @@ class MovieScreen
     @drive_in = drive_in
     @@all << self
   end
+
+  def self.all
+    @@all
+  end
+
 # binding.pry
   def movie_title
     @movie_title
@@ -28,6 +33,10 @@ class MovieScreen
     @@all
   end
 
+  def cars
+    MovieScreen.all.select {|moviescreen| moviescreen.car == self}
+  end
+
 
 
   binding.pry
@@ -38,8 +47,3 @@ end
 # screen1
 # binding.pry
 
-
-# #### MovieScreen
-
-# - `MovieScreen#cars`
-#   - Returns an array of all cars currently at this movie screen.

@@ -4,21 +4,21 @@ class DriveIn
 
     attr_reader :name
 
+    @@all = []
+
     def initialize(name)
         @name = name
+        @@all << self
     end
 
     def screens
-        Movie_screen.all.select{|screen| screen.drive_in == self}
+        @@all
     end
-binding.pry
+# binding.pry
 end
 
 
 
 
 
-# #### DriveIn
 
-# - `DriveIn#screens`
-#   - Returns an array of all movie screens at this drive-in.
