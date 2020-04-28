@@ -1,5 +1,3 @@
-require 'pry' 
-
 class MovieScreen
   attr_reader :capacity, :movie_title, :drive_in  
   attr_accessor :cars 
@@ -15,7 +13,7 @@ class MovieScreen
   end
 
   def self.all_screens 
-    @@all
+    @@all_screens
   end 
 
   def movie_title
@@ -34,7 +32,27 @@ class MovieScreen
     @cars 
   end 
 
+  def self.number_of_viewers
+   self.cars.count 
+  end 
 
+  def self.at_capacity?
+    self.cars.count >= self.capacity 
+  end 
+
+  def self.available_spots 
+    self.capacity - self.number_of_viewers
+  end 
+
+  def self.add_car(car) 
+    # if screen not at cap, update car's screen and return string "enjoy"
+    if self.at_capacity? != true 
+      car.movie_screen = self
+    else nil 
+ 
+    end 
+  
+  end 
 
 end
 
