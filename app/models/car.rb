@@ -1,7 +1,7 @@
 class Car
   
   attr_accessor :passenger_count, :current_movie_screen #allows a reader method that returns the number of passengers in a car and allows passenger_count to be changed after initialization
-  @@all = [] #will be single source of truth
+  @@all = [] #will be single source of truth; car instance tracks which moviescreen it belongs to
   
   def initialize(passenger_count, current_movie_screen = nil)
     @passenger_count = passenger_count
@@ -13,7 +13,7 @@ class Car
     @@all
   end
   
-  def current_movie_screen
+  def current_movie_screen #getter method to retrieve current movie screen
     @current_movie_screen
   end
 
