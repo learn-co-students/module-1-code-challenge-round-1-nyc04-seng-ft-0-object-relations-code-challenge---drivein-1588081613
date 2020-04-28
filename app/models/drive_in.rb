@@ -14,8 +14,22 @@ attr_reader :name
 
     def screens
         MovieScreens.select.all do |ms|
-            ms.drivein == self
+            ms.drive_in == self
+        end
     end
+
+    def whats_playing?
+        screens.map do |ms|
+            ms.movie_title
+        end
+    end
+
+    def full_house?
+        MovieScreen.all.all? do |ms|
+            ms.at_capacity? == true
+        end
+    end
+
 
 
 

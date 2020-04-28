@@ -1,23 +1,58 @@
 class MovieScreen
-  attr_reader :capacity, :movie_title, :drivein, :car 
-  @@all = []
-  def initialize(movie_title, capacity, drivein, car)
+  attr_accessor :capacity, :movie_title, :drive_in, :car 
+  @@all_screens = []
+  def initialize(movie_title, capacity, drive_in, car)
     @movie_title = movie_title
     @capacity = capacity
-    @drivein = drivein
+    @drive_in = drive_in
     @car = car
-    MovieScreen.all << self
+    MovieScreen.all_screens << self
   end
   
 
   def self.all_screens
-    @@all
+    @@all_screens
   end
 
   def cars
-    Cars.all.select do |cars|
-      cars.MovieScreen == self
+    Car.all.select do |cars|
+      cars.moviescreen == self
     end
   end
+
+  def number_of_viewers
+    total = 0
+    cars.map do |cars|
+     total = total + cars.passenger_count
+    end
+    total
+  end
+
+def at_capacity?
+  if number_of_viewers >= @self.capacity
+    return true
+  else
+    return false
+  end
+end
+
+def available_spots
+  self.capacity - self.number_of_viewers
+end
+
+def add_car(car)
+  if at_capacity? == false
+    car.current_movie_screen = self
+    puts "Enjoy!"
+  else 
+    puts "Sold Out!"
+  end
+end
+# this method may rely on the current_movie_screen
+# method we were asked for earlier. the idea being that you could 
+# use it to associate that instance of a car with this current screen.
+# however i am not understanding exaclty why what i have for that method isnt working.
+
+  
 
 end
