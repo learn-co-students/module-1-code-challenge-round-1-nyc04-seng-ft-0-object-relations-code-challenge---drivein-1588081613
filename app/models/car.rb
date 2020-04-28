@@ -1,9 +1,37 @@
 class Car
-  attr_reader :passenger_count
+  attr_accessor :passenger_count#:current_movie_screen,
+
+  @@all =[]
 
   def initialize(passenger_count)
     @passenger_count = passenger_count
+    #@current_movie_screen = current_movie_screen
+    Car.all << self
   end
+
+  def self.all
+    @@all
+  end
+
+  def passenger_count
+    Car.all.select do |car|
+      car.passenger_count
+    end
+  end
+
+  # def current_movie_screen
+  #   binding.pry
+  #   current_movie = MovieScreen.all_screens do |cars|
+  #     binding.pry
+  #     car.car == self
+  #   end
+  #   current_movie
+  # end
+
+  # def current_movie_screen=(current_movie_screen)
+  #   self.movie_screen = current_movie_screen
+  # end
+
 end
 
 

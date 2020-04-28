@@ -13,7 +13,15 @@ class DriveIn
     end
 
     def name
-      
+        self #returns drivein object
+    end
+
+    def screens
+        binding.pry
+        MovieScreen.all_screens.select do |movie|
+            binding.pry
+            movie.drive_in == self
+        end
     end
 
 end

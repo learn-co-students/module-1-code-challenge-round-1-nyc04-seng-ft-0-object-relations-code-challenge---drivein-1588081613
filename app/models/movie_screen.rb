@@ -1,22 +1,48 @@
 class MovieScreen
-  attr_reader :capacity, :movie_title, :drive_in  
+  attr_reader :capacity, :movie_title, :drive_in, :car
 
   @@all = []
-  def initialize(capacity, drive_in, movie_title)
+  def initialize(movie_title, capacity, drive_in, car)
     @movie_title = movie_title
     @capacity = capacity
     @drive_in = drive_in
-    MovieScreen.all << self
+    @car = car
+    MovieScreen.all_screens << self
   end
 
-  def self.all
+  def self.all_screens
     @@all
   end
 
+  def movies
+    MovieScreen.all_screens.select do |movie|
+      movie
+    end
+  end
   def movie_title
-    self
+    MovieScreen.all_screens.select do |movie|
+      movie.movie_title
+    end
   end
 
+  # def capacity
+  #   binding.pry
+  #   MovieScreen.all.map do |movie|
+  #     binding.pry
+  #     movie.capacity
+  #   end
+  # end
+
+  # def drive_in
+  # end
+
+  def cars
+    binding.pry
+    Car.all.select do |car|
+      binding.pry
+    end
+  end
+    
 end
 
 

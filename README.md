@@ -49,7 +49,7 @@ Some of the methods listed are provided to you in the starter code. You should c
 XX - `DriveIn#initialize(name)`
   XX - A drive-in should be initialized with a `name` as a string.
   XX - The name **cannot** be changed after the drive-in is initialized.
-X - `DriveIn#name`
+ - `DriveIn#name`
   - should return the name of the `DriveIn`
 
 #### MovieScreen
@@ -57,20 +57,20 @@ X - `DriveIn#name`
 XX - `MovieScreen#initialize(movie_title, capacity, drive_in)`
   XX - A movie screen should be initialized with a movie title as a string, capacity (as an integer), and a `drive_in` object.
   XX - The movie title, capacity, and drive in **cannot** be changed after the MovieScreen is initialized.
-- `MovieScreen#movie_title`
+ - `MovieScreen#movie_title`
   - should return the movie title
 - `MovieScreen#capacity`
   - should return the `MovieScreen`'s capacity
 - `MovieScreen#drive_in`
   - should return the `DriveIn` associated with this `MovieScreen`
-- `MovieScreen.all_screens`
-  - Returns an array of all movie screens that have been created.
+XX- `MovieScreen.all_screens`
+  XX- Returns an array of all movie screens that have been created.
 
 #### Car
 
-- `Car#initialize(passenger_count)`
-  - A car should be initialized with a `passenger_count` (as an integer).
-  - the passenger count **can** be changed after the `Car` is initialized
+XX- `Car#initialize(passenger_count)`
+  XX- A car should be initialized with a `passenger_count` (as an integer).
+  XX- the passenger count **can** be changed after the `Car` is initialized
 - `Car#passenger_count`
   - Returns the number of passengers in the car.
 - `Car.all`
@@ -93,8 +93,8 @@ XX - `MovieScreen#initialize(movie_title, capacity, drive_in)`
 
 #### DriveIn
 
-- `DriveIn#screens`
-  - Returns an array of all movie screens at this drive-in.
+XX- `DriveIn#screens`
+  XX - Returns an array of all movie screens at this drive-in.
 
 ### Aggregate Methods
 
