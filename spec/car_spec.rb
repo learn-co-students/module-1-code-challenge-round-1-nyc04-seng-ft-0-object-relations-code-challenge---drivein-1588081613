@@ -33,7 +33,7 @@ require_relative 'spec_helper'
 #   - Returns an array of all car instances that have been created.
 describe 'Car' do
   describe '#.all' do
-    it 'returns all cars'
+    it 'returns all cars' do
     drive_in1 = DriveIn.new('drive_in1')
     drive_in2 = DriveIn.new('drive_in3')
 
@@ -46,4 +46,6 @@ describe 'Car' do
     expect(Car.all).to include(car1)
     expect(Car.all).to include(car2)
   end
+end
+
 end 

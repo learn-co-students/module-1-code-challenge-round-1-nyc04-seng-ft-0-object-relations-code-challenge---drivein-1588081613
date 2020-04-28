@@ -17,10 +17,10 @@
 
 class Car
   @@all = []
-  attr_accerssor :current_movie_screen, :passenger_count
-  def initialize(passenger_count)
+  attr_accessor :current_movie_screen, :passenger_count
+  def initialize(current_movie_screen, passenger_count)
+    @current_movie_screen = passenger_count
     @passenger_count = passenger_count
-    @current_movie_screen = nil
     Car.self << self
   end
 
