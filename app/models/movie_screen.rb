@@ -1,7 +1,8 @@
 class MovieScreen
   
   attr_reader :capacity, :movie_title, :drive_in  #creates getter method to return movie_title, capacity, and drive-in
-  attr_accessor :car
+  #don't need car variable here; Car class is tracking which movie screen it belongs to
+
   @@all = []
 
   def initialize(movie_title, capacity, drive_in)
