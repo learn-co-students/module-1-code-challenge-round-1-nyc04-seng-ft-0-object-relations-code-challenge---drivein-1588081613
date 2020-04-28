@@ -37,7 +37,7 @@ class Car
   # def movie
   #   MovieScreen.all.select do |movie|
 
-
+  
 
   def current_movie_screen
     MovieScreen.all.select do |movie|
