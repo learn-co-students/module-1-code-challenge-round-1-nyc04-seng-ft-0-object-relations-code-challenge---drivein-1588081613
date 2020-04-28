@@ -8,14 +8,17 @@ class DriveIn
         @name = name
     end
 
+    def screens
+        Movie_screen.all.select{|screen| screen.drive_in == self}
+    end
+binding.pry
 end
 
 
 
 
 
-# `DriveIn#initialize(name)`
-# - A drive-in should be initialized with a `name` as a string.
-# - The name **cannot** be changed after the drive-in is initialized.
-# - `DriveIn#name`
-# - should return the name of the `DriveIn`
+# #### DriveIn
+
+# - `DriveIn#screens`
+#   - Returns an array of all movie screens at this drive-in.
