@@ -6,4 +6,7 @@ class MovieScreen
     @capacity = capacity
     @drive_in = drive_in
   end
+
+
 end
+# binding.pry
