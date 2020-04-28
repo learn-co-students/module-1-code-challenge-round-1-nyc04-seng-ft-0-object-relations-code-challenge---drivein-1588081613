@@ -18,8 +18,4 @@ class Car
   def current_movie_screen=(movie_screen)
     @movie_screen = movie_screen
   end
-
-
-
-
 end

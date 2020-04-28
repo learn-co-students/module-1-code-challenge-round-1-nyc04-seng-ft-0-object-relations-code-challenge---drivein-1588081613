@@ -17,6 +17,12 @@ movie_screen1 = MovieScreen.new("hats", 10, drive_in1)
 movie_screen2 = MovieScreen.new("scarves", 10, drive_in1)
 movie_screen3 = MovieScreen.new("gloves", 10, drive_in1)
 
+car3.current_movie_screen = movie_screen1
+car4.current_movie_screen = movie_screen1
+car5.current_movie_screen = movie_screen1
+
+
+
 ### WRITE YOUR TEST CODE HERE ###
 
 binding.pry

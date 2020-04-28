@@ -19,6 +19,7 @@ class MovieScreen
     Cars.all.select do |car|
       car.current_movie_screen == self
     end
+  end
 
   def number_of_viewers
     passenger_array = self.cars.map do |car|
@@ -32,7 +33,7 @@ class MovieScreen
   end
 
   def available_spots
-  self.capacity - self.number_of_viewers
+  self.capacity.to_i - self.number_of_viewers.to_i
   end
 
   def add_car(car)
@@ -40,20 +41,7 @@ class MovieScreen
       car.current_movie_screen = self
       "Enjoy!"
     else
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      "Sold Out!"
+    end
+  end
 end

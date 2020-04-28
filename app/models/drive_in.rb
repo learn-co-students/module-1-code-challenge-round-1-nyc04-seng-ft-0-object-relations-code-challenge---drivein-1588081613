@@ -19,10 +19,7 @@ class DriveIn
     end
 
     def full_house
-        self.screens.at
-       
-    
-
+        self.screens.at_capacity?
+    end
 
 end
-
