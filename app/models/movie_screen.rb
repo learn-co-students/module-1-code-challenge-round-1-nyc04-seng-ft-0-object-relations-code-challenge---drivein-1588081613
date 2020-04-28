@@ -22,7 +22,7 @@ class MovieScreen
   def number_of_viewers
     total_passengers = 0
     cars.each do |car|
-      total_passengers << car.passenger_count
+      total_passengers += car.passenger_count
     end
     total_passengers
   end
@@ -36,7 +36,7 @@ class MovieScreen
   end
 
   def available_spots
-    self.capacity - cars.count
+    self.capacity - cars.size
   end
 
   def add_car(car)

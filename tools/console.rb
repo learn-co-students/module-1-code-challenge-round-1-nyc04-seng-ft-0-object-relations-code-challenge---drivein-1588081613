@@ -27,6 +27,7 @@ c7 = Car.new(1, m3)
 c8 = Car.new(1, m1)
 c9 = Car.new(1, m2)
 c10 = Car.new(1, m3)
+c11 = Car.new(4)
 
 binding.pry
 
