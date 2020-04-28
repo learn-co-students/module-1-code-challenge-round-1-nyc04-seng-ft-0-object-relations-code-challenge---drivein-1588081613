@@ -88,12 +88,12 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### MovieScreen
 
-- `MovieScreen#cars`
+- `MovieScreen#cars` #done
   - Returns an array of all cars currently at this movie screen.
 
 #### DriveIn
 
-- `DriveIn#screens`
+- `DriveIn#screens` #done
   - Returns an array of all movie screens at this drive-in.
 
 ### Aggregate Methods

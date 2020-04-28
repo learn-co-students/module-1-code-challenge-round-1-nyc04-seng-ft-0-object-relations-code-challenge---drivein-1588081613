@@ -25,4 +25,37 @@ class MovieScreen
     @@all
   end
 
+  def cars
+    Car.all.select {|x| x.current_movie_screen == self}
+  end
+
+  def number_of_viewers
+    cars.map(&:passenger_count).sum
+  end
+
+  def at_capacity?
+    if number_of_viewers >= @capacity
+      true
+    else
+      false
+    end
+  end
+
+  def available_spots
+    @capacity - number_of_viewers
+  end
+
+  def add_car(car)
+    if available_spots > car.passenger_count
+      puts "Enjoy!"
+      @capacity - car.passenger_count
+      car.current_movie_screen = self
+    else
+      puts "SOld Out!"
+    end
+  end
+
+
+
+
 end

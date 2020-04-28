@@ -11,7 +11,19 @@ class DriveIn
     end
 
     def screens
-        MovieScreen.all_screens.map {|x| x.drive_in == self}
+        MovieScreen.all_screens.select {|x| x.drive_in == self}
     end
+
+    def whats_playing
+        #screens.map { |x| x.movie_title}
+        screens.map(&:movie_title)
+    end
+
+    def full_house?
+        screens.all? {|screen| screen.at_capacity?}
+    end
+
+
+
 
 end
