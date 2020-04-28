@@ -28,12 +28,16 @@ class Car
 # Object Relationship Methods
 # - `Car#current_movie_screen`
 #   - Returns the current movie screen that a particular car is associated with.
-  # def self.current_movie_screen
-  #     movie_screen
-  # end
+  def self.current_movie_screen
+    movie_screen
+      # MovieScreen.all.select {|movie_title| movie_title.movie_title == self }
+  end
 
 # - `Car#current_movie_screen=`
 #   - Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
 #   - **Note:** this will happen _after_ a car has already been created.
+  # def current_movie_screen
+
+  # end
 
 end

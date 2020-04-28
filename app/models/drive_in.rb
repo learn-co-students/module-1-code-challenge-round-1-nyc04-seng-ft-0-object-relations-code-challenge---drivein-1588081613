@@ -23,6 +23,9 @@ class DriveIn
 # Aggregate Methods
 # - `DriveIn#whats_playing`
 #   - Returns an array of all the names of the movies playing at the movie screens at this drive-in.
+    def whats_playing
+        screens.map {|movie_title| movie_title.movie_title}
+    end
 # - `DriveIn#full_house?`
 #   - Returns true if all movie screens at _this_ drive-in are at capacity.
 

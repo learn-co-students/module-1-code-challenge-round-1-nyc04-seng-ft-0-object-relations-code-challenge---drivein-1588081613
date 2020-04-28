@@ -46,10 +46,17 @@ class MovieScreen
 # Aggregate Methods
 # - `MovieScreen#number_of_viewers`
 #   - Returns the total number of passengers viewing the movie, from all the cars currently at this movie screen
+  def number_of_viewers
+    Car.all.map {|car| car.passenger_count}.sum
+  end
+
 # - `MovieScreen#at_capacity?`
 #   - Returns a boolean. If the number of cars at this movie screen is equal to or above the capacity of the movie screen, returns `true`. Otherwise, returns `false`.
+  def at_capacity?
+    Car.all.count >= self.capacity
+  end
 # - `MovieScreen#available_spots`
-#   - Returns the number of spots for cars available at this movie screen. This should be the capacity minus the number of cars currently at this movie screen.
+  #   - Returns the number of spots for cars available at this movie screen. This should be the capacity minus the number of cars currently at this movie screen.
 # - `MovieScreen#add_car(car)`
 #   - Takes in a `Car` instance as the argument
 #   - Depending on the available capacity of the movie screen, associates the `Car` with this movie screen.
