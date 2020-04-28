@@ -47,16 +47,16 @@ Some of the methods listed are provided to you in the starter code. You should c
 #### DriveIn
 
 - `DriveIn#initialize(name)`
-  - A drive-in should be initialized with a `name` as a string.
-  - The name **cannot** be changed after the drive-in is initialized.
+  <!-- - A drive-in should be initialized with a `name` as a string. -->
+  <!-- - The name **cannot** be changed after the drive-in is initialized. -->
 - `DriveIn#name`
-  - should return the name of the `DriveIn`
+  <!-- - should return the name of the `DriveIn` -->
 
 #### MovieScreen
 
 - `MovieScreen#initialize(movie_title, capacity, drive_in)`
-  - A movie screen should be initialized with a movie title as a string, capacity (as an integer), and a `drive_in` object.
-  - The movie title, capacity, and drive in **cannot** be changed after the MovieScreen is initialized.
+  <!-- - A movie screen should be initialized with a movie title as a string, capacity (as an integer), and a `drive_in` object. -->
+  <!-- - The movie title, capacity, and drive in **cannot** be changed after the MovieScreen is initialized. -->
 - `MovieScreen#movie_title`
   - should return the movie title
 - `MovieScreen#capacity`
