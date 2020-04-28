@@ -46,43 +46,43 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### DriveIn
 
-- `DriveIn#initialize(name)`
+- `DriveIn#initialize(name)` #done
   - A drive-in should be initialized with a `name` as a string.
   - The name **cannot** be changed after the drive-in is initialized.
-- `DriveIn#name`
+- `DriveIn#name` #done
   - should return the name of the `DriveIn`
 
 #### MovieScreen
 
-- `MovieScreen#initialize(movie_title, capacity, drive_in)`
+- `MovieScreen#initialize(movie_title, capacity, drive_in)` #done
   - A movie screen should be initialized with a movie title as a string, capacity (as an integer), and a `drive_in` object.
   - The movie title, capacity, and drive in **cannot** be changed after the MovieScreen is initialized.
-- `MovieScreen#movie_title`
+- `MovieScreen#movie_title` #done
   - should return the movie title
-- `MovieScreen#capacity`
+- `MovieScreen#capacity` #done
   - should return the `MovieScreen`'s capacity
-- `MovieScreen#drive_in`
+- `MovieScreen#drive_in` #done
   - should return the `DriveIn` associated with this `MovieScreen`
-- `MovieScreen.all_screens`
+- `MovieScreen.all_screens` #done
   - Returns an array of all movie screens that have been created.
 
 #### Car
 
-- `Car#initialize(passenger_count)`
+- `Car#initialize(passenger_count)` #done
   - A car should be initialized with a `passenger_count` (as an integer).
   - the passenger count **can** be changed after the `Car` is initialized
-- `Car#passenger_count`
+- `Car#passenger_count` #done
   - Returns the number of passengers in the car.
-- `Car.all`
+- `Car.all` #done
   - Returns an array of all car instances that have been created.
 
 ### Object Relationship Methods
 
 #### Car
 
-- `Car#current_movie_screen`
+- `Car#current_movie_screen` #done
   - Returns the current movie screen that a particular car is associated with.
-- `Car#current_movie_screen=`
+- `Car#current_movie_screen=` #done
   - Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
   - **Note:** this will happen _after_ a car has already been created.
 
