@@ -16,7 +16,9 @@ class MovieScreen
   end
 
   def cars
-    self.car
+    self.cars
+    end
+
   end
 
   # def number_of_viewers
@@ -33,13 +35,18 @@ class MovieScreen
   def at_capacity?
     # binding.pry
     if cars.count >= self.capacity
-      # binding.pry
+      binding.pry
     else 
       return "false"
     end
   end
 
-  def available_spots
+  # def available_spots
+  #   if self.capacity -=
+  # end
+
+  # def add_car
+  # end
 
 
 
