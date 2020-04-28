@@ -41,7 +41,6 @@ class MovieScreen
     end
   end
 
-  
 
   def available_spots
     @capacity - number_of_viewers
