@@ -9,9 +9,12 @@ class Car
     @@all
   end
   def current_movie_screen
+    MovieScreen.all.select {|screens| screens.car == self}
     # - Returns the current movie screen that a particular car is associated with.
   end
-  def current_movie_screen=
+  def current_movie_screen=(moviescreen)
+    # Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
+    # #   - **Note:** this will happen _after_ a car has already been created.
   end 
 end
 

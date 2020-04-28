@@ -1,15 +1,23 @@
 class MovieScreen
-  attr_reader :capacity, :movie_title, :drive_in  
+  attr_reader :capacity, :movie_title, :drive_in 
+  attr_accessor :car
   @@all = []
-  def initialize(movie_title, capacity, drive_in)
+  def initialize(movie_title, capacity, drive_in, car)
+    ##maybe take out the car?? 
     @movie_title = movie_title
     @capacity = capacity
     @drive_in = drive_in
+    @car = car
     MovieScreen.all << self
   end
   def self.all 
     @@all 
   end
+  def cars
+ #rework this... returns empty arrays for each car
+    Car.all.select {|cars| cars.current_movie_screen == self}
+  end 
+  
 end
 
 #### MovieScreen
