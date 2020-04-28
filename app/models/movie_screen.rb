@@ -21,9 +21,10 @@ class MovieScreen
   end
 
   def movie_title
-    self.all_screens.find do |movie|
-      movie.movie_title
-    end
+    self.movie_title
+    # self.all.find do |movie_screen|
+    #   movie_title.movie_title
+    # end
   end
 end
 
