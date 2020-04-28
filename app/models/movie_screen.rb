@@ -26,13 +26,14 @@ class MovieScreen
     @@all_screens
   end
 
-  def cars
-    Car.all.map do |info|
-      info.capacity == self
-    end
-  end
+  # def cars
+  #   Car.all.select do |cars|
+  #     info.passenger_count == self
+  #   end
+  # end
 
 
+ 
 
 
 
