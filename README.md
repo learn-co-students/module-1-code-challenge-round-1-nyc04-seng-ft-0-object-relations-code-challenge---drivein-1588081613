@@ -58,52 +58,52 @@ Some of the methods listed are provided to you in the starter code. You should c
   <!-- - A movie screen should be initialized with a movie title as a string, capacity (as an integer), and a `drive_in` object. -->
   <!-- - The movie title, capacity, and drive in **cannot** be changed after the MovieScreen is initialized. -->
 - `MovieScreen#movie_title`
-  - should return the movie title
+  <!-- - should return the movie title -->
 - `MovieScreen#capacity`
-  - should return the `MovieScreen`'s capacity
+  <!-- - should return the `MovieScreen`'s capacity -->
 - `MovieScreen#drive_in`
-  - should return the `DriveIn` associated with this `MovieScreen`
+  <!-- - should return the `DriveIn` associated with this `MovieScreen` -->
 - `MovieScreen.all_screens`
-  - Returns an array of all movie screens that have been created.
+  <!-- - Returns an array of all movie screens that have been created. -->
 
 #### Car
 
 - `Car#initialize(passenger_count)`
-  - A car should be initialized with a `passenger_count` (as an integer).
-  - the passenger count **can** be changed after the `Car` is initialized
+  <!-- - A car should be initialized with a `passenger_count` (as an integer). -->
+  <!-- - the passenger count **can** be changed after the `Car` is initialized -->
 - `Car#passenger_count`
-  - Returns the number of passengers in the car.
+  <!-- - Returns the number of passengers in the car. -->
 - `Car.all`
-  - Returns an array of all car instances that have been created.
+  <!-- - Returns an array of all car instances that have been created. -->
 
 ### Object Relationship Methods
 
 #### Car
 
 - `Car#current_movie_screen`
-  - Returns the current movie screen that a particular car is associated with.
+  <!-- - Returns the current movie screen that a particular car is associated with. -->
 - `Car#current_movie_screen=`
-  - Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
-  - **Note:** this will happen _after_ a car has already been created.
+  <!-- - Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at. -->
+  <!-- - **Note:** this will happen _after_ a car has already been created. -->
 
 #### MovieScreen
 
 - `MovieScreen#cars`
-  - Returns an array of all cars currently at this movie screen.
+  <!-- - Returns an array of all cars currently at this movie screen. -->
 
 #### DriveIn
 
 - `DriveIn#screens`
-  - Returns an array of all movie screens at this drive-in.
+  <!-- - Returns an array of all movie screens at this drive-in. -->
 
 ### Aggregate Methods
 
 #### MovieScreen
 
 - `MovieScreen#number_of_viewers`
-  - Returns the total number of passengers viewing the movie, from all the cars currently at this movie screen
+  <!-- - Returns the total number of passengers viewing the movie, from all the cars currently at this movie screen -->
 - `MovieScreen#at_capacity?`
-  - Returns a boolean. If the number of cars at this movie screen is equal to or above the capacity of the movie screen, returns `true`. Otherwise, returns `false`.
+  <!-- - Returns a boolean. If the number of cars at this movie screen is equal to or above the capacity of the movie screen, returns `true`. Otherwise, returns `false`. -->
 - `MovieScreen#available_spots`
   - Returns the number of spots for cars available at this movie screen. This should be the capacity minus the number of cars currently at this movie screen.
 - `MovieScreen#add_car(car)`
@@ -115,7 +115,7 @@ Some of the methods listed are provided to you in the starter code. You should c
 #### DriveIn
 
 - `DriveIn#whats_playing`
-  - Returns an array of all the names of the movies playing at the movie screens at this drive-in.
+  <!-- - Returns an array of all the names of the movies playing at the movie screens at this drive-in. -->
 - `DriveIn#full_house?`
   - Returns true if all movie screens at _this_ drive-in are at capacity.
 

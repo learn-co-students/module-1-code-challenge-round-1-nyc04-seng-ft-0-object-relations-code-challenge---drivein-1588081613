@@ -19,11 +19,29 @@ class MovieScreen
     self.car
   end
 
+  # def number_of_viewers
+  #   # cars.map do |x|
+  #   #   binding.pry
+  #   #   x.passenger_count
+  #   end.sum
+  # end
+
   def number_of_viewers
-    self.all_screens.map do |x|
-      x.car.passenger_count
-    end.sum
+    cars.passenger_count
   end
+
+  def at_capacity?
+    # binding.pry
+    if cars.count >= self.capacity
+      # binding.pry
+    else 
+      return "false"
+    end
+  end
+
+  def available_spots
+
+
 
 
 
