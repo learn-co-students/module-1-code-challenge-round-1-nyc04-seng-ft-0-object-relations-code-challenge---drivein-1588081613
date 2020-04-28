@@ -1,5 +1,5 @@
 class Car
-  attr_accessor :passenger_count#:current_movie_screen,
+  attr_accessor :passenger_count #:current_movie_screen,
 
   @@all =[]
 
@@ -13,7 +13,7 @@ class Car
     @@all
   end
 
-  def passenger_count
+  def passenger_count #passenger count of all cars not instance of car
     Car.all.select do |car|
       car.passenger_count
     end

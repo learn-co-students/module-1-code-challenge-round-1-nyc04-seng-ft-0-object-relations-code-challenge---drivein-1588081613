@@ -14,40 +14,38 @@ class MovieScreen
     @@all
   end
 
-  def movies
-    MovieScreen.all_screens.select do |movie|
-      movie
-    end
-  end
   def movie_title
     MovieScreen.all_screens.select do |movie|
-      movie.movie_title
+      movie.movie_title #method calling the method
     end
   end
 
-  # def capacity
-  #   binding.pry
-  #   MovieScreen.all.map do |movie|
-  #     binding.pry
-  #     movie.capacity
-  #   end
-  # end
+  def capacity
+    MovieScreen.all.map do |movie|
+      movie.capacity#method calling the method
+    end
+  end
 
-  # def drive_in
-  # end
+  def drive_in
+    MovieScreen.all_screens.select do |movie|
+      movie.drive_in #method calling the method
+    end
+  end
 
   def cars
-    binding.pry
-    Car.all.select do |car|
-      binding.pry
+    MovieScreen.all.select do |movie|
+      movie.cars #method calling the method
     end
   end
-    
+
 end
 
 
 #initializes with movie_title, capacity, and drive-in
   #can only read capacity, movie_title, and drive_in
+
+#join model because drive in has many cars through movie screen but car is only at one drivein
+  #missing the connection between car and movie_screen
 
 #deliverables
 #movie_titel is a string, #capacity is an integer, #drive in is an object

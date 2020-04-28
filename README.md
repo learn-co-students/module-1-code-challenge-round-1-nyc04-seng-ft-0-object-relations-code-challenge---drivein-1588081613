@@ -73,7 +73,7 @@ XX- `Car#initialize(passenger_count)`
   XX- the passenger count **can** be changed after the `Car` is initialized
 - `Car#passenger_count`
   - Returns the number of passengers in the car.
-- `Car.all`
+XX- `Car.all`
   - Returns an array of all car instances that have been created.
 
 ### Object Relationship Methods
