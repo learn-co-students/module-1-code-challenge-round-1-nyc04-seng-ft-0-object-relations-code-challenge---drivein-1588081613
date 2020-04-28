@@ -15,4 +15,13 @@ class DriveIn
         screens.map {|screen| screen.movie_title}
     end
 
+    #Returns true if all movie screens at this drive-in are at capacity
+    def full_house?
+        if screens.each {|screen| screen.at_capacity? == true}
+            return true
+        else 
+            return false
+        end
+    end
+
 end
