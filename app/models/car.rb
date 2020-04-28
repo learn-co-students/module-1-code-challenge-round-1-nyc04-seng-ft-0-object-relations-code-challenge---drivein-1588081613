@@ -19,17 +19,11 @@ class Car
   end
 
   def current_movie_screen=(the_movie)
-    MovieScreen.all.map do |cars|
+    MovieScreen.all_screens.map do |cars|
       if cars.car == self
         cars.current_movie_screen=the_movie
+      end
     end
   end
-
-
-
-
-  
-
-
 
 end
