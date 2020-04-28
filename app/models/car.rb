@@ -10,5 +10,11 @@ class Car
   def self.all
     @@all
   end
-  
+
+  def current_movie_screen
+    MovieScreen.all_screens.select do |x|
+      x.car == self
+    end
+  end
+
 end
