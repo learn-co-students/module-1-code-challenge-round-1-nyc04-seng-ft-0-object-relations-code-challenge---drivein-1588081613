@@ -5,7 +5,7 @@ For this challenge, we will be working with a drive-in movie domain.
 We have three models: `DriveIn`, `MovieScreen`, and `Car`.
 
 For this challenge, a `DriveIn` has many `MovieScreen`s, a `MovieScreen` has many `Car`s, and a `Car` belongs to a `MovieScreen`.
-
+#MovieSCreen is the joiner model
 A `DriveIn` has many `Car`s through its `MovieScreen`s. A `Car` is only at one `DriveIn`.
 
 **Note**: You should draw your domain on paper or on a whiteboard _before you start coding_. Remember to identify a single source of truth for your data.
