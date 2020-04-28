@@ -21,10 +21,15 @@ class MovieScreen
   end
 
   def movie_title
+    #should return the moviescreen instance title
     self.movie_title
     # self.all.find do |movie_screen|
     #   movie_title.movie_title
     # end
+  end
+  def capacity
+    #return moviescreen instance capacity
+    
   end
 end
 
