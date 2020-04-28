@@ -10,6 +10,29 @@ class DriveIn
         @name
     end
 
+    def screens
+        MovieScreen.all_screens.select do |screens|
+            screens.drive_in == self
+        end
+    end
+
+    def whats_playing
+        new_array=[]
+        MovieScreen.all_screens.each do |screens|
+           if screens.drive_in == self
+             new_array << screens.movie_title
+           end
+        end
+        return new_array
+    end
+
+    def full_house?
+
+
+
+    end
+
+
 
 
 end

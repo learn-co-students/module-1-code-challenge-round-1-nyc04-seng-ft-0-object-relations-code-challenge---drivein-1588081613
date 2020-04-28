@@ -2,10 +2,11 @@ class MovieScreen
   attr_reader :capacity, :movie_title, :drive_in  
   @@all_screens=[]
 
-  def initialize(movie_title, capacity, drive_in)
+  def initialize(movie_title, capacity, drive_in,car)
     @movie_title = movie_title
     @capacity = capacity
     @drive_in = drive_in
+    @car=car
     MovieScreen.all_screens << self
   end
 
@@ -17,7 +18,9 @@ class MovieScreen
     @capacity
   end
 
- 
+  def drive_in
+    @drive_in
+  end
 
   def self.all_screens
     @@all_screens
@@ -25,11 +28,13 @@ class MovieScreen
 
   def cars
     Car.all.map do |info|
-      info.movie_screen == self
+      info.capacity == self
     end
   end
 
-  
+
+
+
 
 
 

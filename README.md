@@ -61,8 +61,8 @@ Some of the methods listed are provided to you in the starter code. You should c
   - should return the movie title
 - `MovieScreen#capacity`
   - should return the `MovieScreen`'s capacity
-<!-- - `MovieScreen#drive_in`
-  - should return the `DriveIn` associated with this `MovieScreen` -->
+- `MovieScreen#drive_in`
+  - should return the `DriveIn` associated with this `MovieScreen`
 - `MovieScreen.all_screens`
   - Returns an array of all movie screens that have been created.
 
@@ -80,16 +80,18 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### Car
 
+
+
 - `Car#current_movie_screen`
   - Returns the current movie screen that a particular car is associated with.
-- `Car#current_movie_screen=`
+<!-- - `Car#current_movie_screen=`
   - Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
-  - **Note:** this will happen _after_ a car has already been created.
+  - **Note:** this will happen _after_ a car has already been created. -->
 
 #### MovieScreen
 
-- `MovieScreen#cars`
-  - Returns an array of all cars currently at this movie screen.
+<!-- - `MovieScreen#cars`
+  - Returns an array of all cars currently at this movie screen. -->
 
 #### DriveIn
 
@@ -116,8 +118,8 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 - `DriveIn#whats_playing`
   - Returns an array of all the names of the movies playing at the movie screens at this drive-in.
-- `DriveIn#full_house?`
-  - Returns true if all movie screens at _this_ drive-in are at capacity.
+<!-- - `DriveIn#full_house?`
+  - Returns true if all movie screens at _this_ drive-in are at capacity. -->
 
 ## Rubric
 
