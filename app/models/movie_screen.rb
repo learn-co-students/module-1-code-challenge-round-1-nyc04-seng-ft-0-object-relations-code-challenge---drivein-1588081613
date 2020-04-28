@@ -15,9 +15,15 @@ class MovieScreen
   end
 
   def cars
-    Car.all.select do |cars|
-      cars.moviescreen == self
+    self.map do |ms|
+      ms.car
     end
+    #i know i am supposed to ask the
+    # instance of a movie screen how many cars there 
+    # are. but if i add a moviescreen attribute to the car instance, 
+    # there is no longer a single source of truth. 
+    #the readme states that things are happening - through - the movie screen.
+    # but it doesnt seem to actually be functioning to me as a join class.
   end
 
   def number_of_viewers
@@ -29,11 +35,12 @@ class MovieScreen
   end
 
 def at_capacity?
-  if number_of_viewers >= @self.capacity
+  if number_of_viewers >= @capacity
     return true
   else
     return false
   end
+ 
 end
 
 def available_spots
