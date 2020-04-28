@@ -19,7 +19,7 @@ C1 =Car.new(4)
 C2 =Car.new(3)
 C3 =Car.new(50)
 
-C1.movie_screen = MS1
+C1.current_movie_screen = MS1
 
 
 

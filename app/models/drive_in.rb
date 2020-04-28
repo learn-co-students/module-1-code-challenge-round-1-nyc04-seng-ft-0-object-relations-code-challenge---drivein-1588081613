@@ -30,7 +30,7 @@ class DriveIn
                 movie_screen.at_capacity?
             }
         else
-            "This Drive-In has no available Movie Screens"
+           false
         end
 
     end
