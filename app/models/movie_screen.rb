@@ -1,5 +1,6 @@
 class MovieScreen
-  attr_reader :capacity, :movie_title, :drive_in  
+  attr_reader :capacity, :movie_title, :drive_in
+  attr_accessor :car
   @@all_screens=[]
 
   def initialize(movie_title, capacity, drive_in,car)
