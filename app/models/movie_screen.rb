@@ -22,6 +22,7 @@ class MovieScreen
     total_viewers
 #   - Returns the total number of passengers viewing the movie, from all the cars currently at this movie screen
   end 
+  
 end
 
 #### MovieScreen
