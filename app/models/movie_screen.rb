@@ -15,15 +15,15 @@ class MovieScreen
   end
 
   def cars
-    self.map do |ms|
-      ms.car
+    MovieScreen.all_screens.map do |ms|
+      ms.car == self
     end
     #i know i am supposed to ask the
     # instance of a movie screen how many cars there 
     # are. but if i add a moviescreen attribute to the car instance, 
     # there is no longer a single source of truth. 
     #the readme states that things are happening - through - the movie screen.
-    # but it doesnt seem to actually be functioning to me as a join class.
+    # but it doesnt seem to actually be functioning to me as a join class.i keep having to ask the other sources for the information.
   end
 
   def number_of_viewers
@@ -32,6 +32,7 @@ class MovieScreen
      total = total + cars.passenger_count
     end
     total
+    #my logic is to go through the cars and add up each cars. so i would use the cars method
   end
 
 def at_capacity?
@@ -40,6 +41,7 @@ def at_capacity?
   else
     return false
   end
+
  
 end
 
@@ -55,11 +57,10 @@ def add_car(car)
     puts "Sold Out!"
   end
 end
-# this method may rely on the current_movie_screen
+# this ^  method may rely on the current_movie_screen
 # method we were asked for earlier. the idea being that you could 
 # use it to associate that instance of a car with this current screen.
 # however i am not understanding exaclty why what i have for that method isnt working.
 
-  
 
 end
