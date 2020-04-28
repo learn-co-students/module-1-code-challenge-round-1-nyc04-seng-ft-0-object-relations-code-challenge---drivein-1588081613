@@ -1,21 +1,22 @@
 class Car
-  attr_accessor :passenger_count
+  attr_accessor :passenger_count, :current_movie_screen
   @@all = []
-  def initialize(passenger_count)
+  def initialize(passenger_count, current_movie_screen = nil)
     @passenger_count = passenger_count
+    @current_movie_screen = current_movie_screen
     Car.all << self
   end
   def self.all
     @@all
   end
-  def current_movie_screen
-    MovieScreen.all.select {|screens| screens.car == self}
-    # - Returns the current movie screen that a particular car is associated with.
-  end
-  def current_movie_screen=(moviescreen)
+  # def current_movie_screen
+  #   MovieScreen.all.select {|screens| screens.car == self}
+  #   # - Returns the current movie screen that a particular car is associated with.
+  # end
+  # def current_movie_screen=(moviescreen)
     # Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
     # #   - **Note:** this will happen _after_ a car has already been created.
-  end 
+  # end 
 end
 
 # #### Car
@@ -28,8 +29,8 @@ end
 # - ((`Car.all`
 #   - Returns an array of all car instances that have been created.))
 
-# - `Car#current_movie_screen`
-#   - Returns the current movie screen that a particular car is associated with.
+# - ((`Car#current_movie_screen`
+#   - Returns the current movie screen that a particular car is associated with.))
 # - `Car#current_movie_screen=`
 #   - Assigns a movie screen object to a particular car to indicate which movie screen that car is currently at.
 #   - **Note:** this will happen _after_ a car has already been created.

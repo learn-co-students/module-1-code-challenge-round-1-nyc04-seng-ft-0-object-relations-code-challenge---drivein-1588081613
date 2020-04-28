@@ -13,12 +13,12 @@ class DriveIn
     def full_house?
          total_passengers = 0
          screens.map do |screens| 
-            screens.passenger_count
+            total_passengers = total_passengers + screens.passenger_count
          end
-        #  total_passengers
-        #  total_passengers = total_passengers + 
+        total_passengers
+        #  
          #iterate through the screens method to add up the passenger count 
-         #and if total_passengers >= 
+         #and if total_passengers >= screens.capacity
         # Returns true if all movie screens at _this_ drive-in are at capacity.
     end
 end

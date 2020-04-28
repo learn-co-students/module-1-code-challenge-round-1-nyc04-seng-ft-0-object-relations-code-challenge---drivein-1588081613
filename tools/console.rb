@@ -12,9 +12,11 @@ drivein1 = DriveIn.new("Beach drive-in")
 drivein2 = DriveIn.new("Forest drive-in")
 drivein3 = DriveIn.new("Desert drive-in")
 
-moviescreen1 = MovieScreen.new("Titanic", 30, drivein1, car1)
-moviescreen2 = MovieScreen.new("Hitch", 50, drivein2, car2)
-moviescreen3 = MovieScreen.new("Austin Powers", 30, drivein1, car3)
+moviescreen1 = MovieScreen.new("Titanic", 30, drivein1)
+moviescreen2 = MovieScreen.new("Hitch", 50, drivein2)
+moviescreen3 = MovieScreen.new("Austin Powers", 30, drivein1)
+
+car1.current_movie_screen = moviescreen1
 
 
 ### WRITE YOUR TEST CODE HERE ###
