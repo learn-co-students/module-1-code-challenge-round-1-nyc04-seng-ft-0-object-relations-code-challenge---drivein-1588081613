@@ -1,6 +1,6 @@
 class Car
 
-  attr_reader :passenger_count
+  attr_accessor :passenger_count
 
   @@all = []
 
@@ -8,12 +8,16 @@ class Car
     @passenger_count = passenger_count
     Car.all << self
   end
+
   def self.all
     @@all
   end
-  # def passenger_count
-  #   self.all.
-  # end
+
+  def passenger_count
+    self.all.each do |car|
+      @passenger_count += car.passenger_count
+    end
+  end
 end
 
 # Car
