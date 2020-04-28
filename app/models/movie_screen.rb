@@ -14,7 +14,14 @@ class MovieScreen
   def cars
     Car.all.select {|cars| cars.current_movie_screen == self}
   end 
-
+  def number_of_viewers
+    total_viewers = 0 
+    cars.map do |cars|
+      total_viewers = total_viewers + cars.passenger_count
+    end
+    total_viewers
+#   - Returns the total number of passengers viewing the movie, from all the cars currently at this movie screen
+  end 
 end
 
 #### MovieScreen
@@ -33,11 +40,11 @@ end
 # - ((`MovieScreen.all_screens`
 #   - Returns an array of all movie screens that have been created.))
 
-# - `MovieScreen#cars`
-#   - Returns an array of all cars currently at this movie screen.
+# - (`MovieScreen#cars`
+#   - Returns an array of all cars currently at this movie screen.)
 
-# - `MovieScreen#number_of_viewers`
-#   - Returns the total number of passengers viewing the movie, from all the cars currently at this movie screen
+# - ((`MovieScreen#number_of_viewers`
+#   - Returns the total number of passengers viewing the movie, from all the cars currently at this movie screen))
 # - `MovieScreen#at_capacity?`
 #   - Returns a boolean. If the number of cars at this movie screen is equal to or above the capacity of the movie screen, returns `true`. Otherwise, returns `false`.
 # - `MovieScreen#available_spots`
