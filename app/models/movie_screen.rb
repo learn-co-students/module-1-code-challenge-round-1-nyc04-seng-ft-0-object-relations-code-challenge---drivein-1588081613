@@ -38,7 +38,7 @@ class MovieScreen
     #If the movie screen is not at capacity, updates the car's current movie screen and returns the string "Enjoy!".
     #If the movie screen is at capacity, it should return the string "Sold Out!", and should not associate the car to the movie screen.
   def add_car(car)
-    if !at_capacity? 
+    if number_of_viewers !at_capacity? 
       car.current_movie_screen = self
       puts "Enjoy!"
     else 

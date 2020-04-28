@@ -4,8 +4,8 @@ def reload
   load 'config/environment.rb'
 end
 
-# Cars belong to MovieScreens which belong to DriveIns. 
-# Cars keep track of their MovieScreens. Ask a car which movie screen it belongs to.
+# Cars belong to MovieScreens which belong to DriveIns. Car <= MovieScreen <= DriveIns
+# Cars keep track of their MovieScreens. Ask a Car which MovieScreen it belongs to.
 # MovieScreens keep track of their DriveIns.
 
 
@@ -51,7 +51,6 @@ andrews.screens # => screen1
 screen1.number_of_viewers
 screen1.at_capacity?
 screen1.available_spots
-screen1.add_car(car2)
 
 zoomcinema.whats_playing #=> ["Some Like It Hot", "Parasite"]
 zoomcinema.full_house?
