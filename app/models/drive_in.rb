@@ -21,4 +21,26 @@ class DriveIn
    @name
  end
 
+ def screens
+   Car.all.select { |car| car.current_movie_screen.drive_in == self ? car.current_movie_screen : nil }.compact
+ end
+
+ def whats_playing
+   self.screens.map { |movie_screen| movie_screen.movie_title}
+ end
+
+ def get_head_count
+   Car.all.select{ |car| car.current_movie_screen.drive_in == self ? car.passenger_count: nil }.compact.sum
+ end
+
+ def get_screens_capacity
+    self.screens..map { |movie_screen| movie_screen.capacity}.sum
+ end
+
+
+ def full_house?
+   #get_head_count > this.capacity
+      self.get_head_count >= self.get_screens_capacity ? true : false 
+ end
+
 end

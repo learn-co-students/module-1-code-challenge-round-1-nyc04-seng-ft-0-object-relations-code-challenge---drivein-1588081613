@@ -35,18 +35,29 @@ class MovieScreen
     @drive_in = drive_in
   end
 
-  def movie_title
+  def cars
+    Car.all.select { |car| car.current_movie_screen == self ? car : nil }.compact
   end
 
-  def capacity
-
+  def number_of_viewers
+    Car.all.select{ |car| car.current_movie_screen == self ? car.passenger_count: nil }.compact.sum
   end
 
-  def drive_in
-
+  def at_capacity?
+     self.number_of_viewers >= self.capacity ? true : false
   end
 
-  def self.all_screens
+  def available_spots
+     self.at_capacity ? "At capacity" : (self.capacity - self.number_of_viewers)
+   end
+
+  def add_car(car)
+    if self.at_capacity
+      'Sold out!'
+    else
+       car.current_movie_screen = self
+       "Enjoy"
+     end
 
   end
 

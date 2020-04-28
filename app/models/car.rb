@@ -17,8 +17,7 @@
 
 class Car
   @@all = []
-  attr_reader :passenger_count
-  attr_accerssor :current_movie_screen
+  attr_accerssor :current_movie_screen, :passenger_count
   def initialize(passenger_count)
     @passenger_count = passenger_count
     @current_movie_screen = nil
@@ -28,15 +27,5 @@ class Car
   def self.all
     @@all
   end
-
-  def passenger_count
-    
-  end
-
-  def initialize(passenger_count)
-
-  end
-
-
 
 end
